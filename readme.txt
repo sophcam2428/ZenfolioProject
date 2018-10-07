@@ -24,5 +24,10 @@ The Worst case space is O(n).
 		If those assumptions are current then it is done as well.
 
 
+Refrences:
+
+Install python 3.6: https://www.python.org/downloads/release/python-360/
+Install pycharm: https://www.jetbrains.com/pycharm/download/#section=mac
+Install pip: https://pip.pypa.io/en/stable/installing/
 
 
