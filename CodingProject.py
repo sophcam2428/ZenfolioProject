@@ -36,7 +36,6 @@ class CodingProject:
         self.numeric_list = []
 
 
-
     def handle_string(self):
 
         dic_chars = {}
@@ -133,7 +132,7 @@ def main():
     cp = CodingProject()
 
     while cp.get_user_input() != "quit":
-
+        cp.clean_up()
         # get input form the user and discard white spaces at the beginning and end of the input
         cp.set_user_input(input("Please state a string or a number, to quit write quit\n").strip())
 
@@ -147,6 +146,7 @@ def main():
             else:
                 if cp.get_user_input() != "quit":
                     cp.handle_string()
+
 
     print("Have a good day!")
 

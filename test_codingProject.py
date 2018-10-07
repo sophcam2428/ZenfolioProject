@@ -6,6 +6,11 @@ class TestCodingProject(TestCase):
     cp = CodingProject()
 
     def test_handle_string_number_1(self):
+
+        print("Input: I am n0thing m0r3 than a string. I t00 hav3 a "
+                               "lexic0graphoc 0rd3r")
+        print("--------------------------------------------")
+
         self.cp.set_user_input("I am n0thing m0r3 than a string. I t00 hav3 a "
                                "lexic0graphoc 0rd3r")
         self.cp.handle_string()
@@ -13,16 +18,28 @@ class TestCodingProject(TestCase):
                                                 "n: 4 o: 1 p: 1 r: 5 s: 1 t: 4 v: 1 x: 1")
 
     def test_handle_string_number_2(self):
+
+        print("Input: sunsoutgunsout")
+        print("--------------------------------------------")
+
         self.cp.set_user_input("sunsoutgunsout")
         self.cp.handle_string()
-        self.assertEquals(self.cp.string_result, "g: 1 n: 2 o: 2 s: 3 t: 2 u: 4")
+        self.assertEqual(self.cp.string_result, "g: 1 n: 2 o: 2 s: 3 t: 2 u: 4")
 
     def test_handle_string_number_3(self):
+
+        print("Input: quit quit")
+        print("--------------------------------------------")
+
         self.cp.set_user_input("quit quit")
         self.cp.handle_string()
-        self.assertEquals(self.cp.string_result, "i: 2 q: 2 t: 2 u: 2")
+        self.assertEqual(self.cp.string_result, "i: 2 q: 2 t: 2 u: 2")
 
     def test_numeric_sequence_number_1(self):
+
+        print("Input: 1 2 13 45 99 0 0 0 1")
+        print("--------------------------------------------")
+
         self.cp.set_user_input("1 2 13 45 99 0 0 0 1")
         self.cp.handle_numeric()
         self.mean("17.88888888888889")
@@ -31,6 +48,10 @@ class TestCodingProject(TestCase):
         self.range("99.0")
 
     def test_numeric_sequence_number_2(self):
+
+        print("Input: 0")
+        print("--------------------------------------------")
+
         self.cp.set_user_input("0")
         self.cp.handle_numeric()
         self.mean("0.0")
